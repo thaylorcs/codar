@@ -12,15 +12,15 @@
 <body>
     <header>
         
-
         <div class="container" id="menu">
-            <a href="#" id="logo">Codar<span id="ponto">.</span></a>
+            <a href="#" id="logo" class="red">Codar<span id="ponto">.</span></a>
+            
             <nav>
                 <ul>
                     <li><a href="">Início</a></li>
                     <li><a href="">Serviços</a></li>
                     <li><a href="">Contato</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="#" class="btn-primary">Login</a></li>
                 </ul>
                 
             </nav>
@@ -30,9 +30,12 @@
     <main>
         <div class="container topo">
             <img src="img/video_call.png" id="video-call" alt="Pessoa em vídeo conferência">
-            <p>Alavanque seu negócio com um</p> 
-            <h1>Website incrível</h1>
-            <a href="#">Solicitar orçamento</a>
+            
+            <div class="container texto">
+                <p id="alavanque">Alavanque seu negócio com um</p> 
+                <h1>Website incrível</h1>
+                <a href="#" class="btn-primary">Solicitar orçamento</a>
+            </div>
         </div>
 
         <div class="container services">
@@ -44,42 +47,79 @@
                 <li><i class="fas fa-check-circle"></i> Chat online</li>
                 <li><i class="fas fa-check-circle"></i> Blog integrado</li>
             </ul>
+            <div class="services-img">
+                <img src="img/coding_.png" alt="" id="coding">
+            </div>
         </div>
 
-        <img src="img/coding_.png" alt="" id="coding">
+        
 
-        <h3>Nossa equipe está à disposição!</h3>
+        <div class="container call-to-action">
+            <h2>Nossa equipe está à disposição!</h2>
 
-        <input type="tel" name="Celular" id="celular" placeholder="Celular">
-        <a href="#">Ligamos para você</a>
+            <input type="tel" name="Celular" id="celular" placeholder="Celular">
+            <a href="#" class="btn-primary">Ligamos para você</a>
+        </div>
 
-        <div class="depoimentos">
+        <div class="depoimentos container">
             <div class="depoimento">
-                <p>Já tive experiências com outras 4 empresas da área e a Codar é sem sombra de dúvidas superior em todos os aspectos.
-                    Pedro Ferreira Construtora Minari</p>
+
+                <div class="dep-texto">
+                    <span class="dot"></span>
+                    <p>
+                        Já tive experiências com outras 4 empresas da área e a Codar é sem sombra de dúvidas     superior em todos os aspectos.
+                    </p>
+                </div>
+                <div class="author">
+                    <p>
+                        Pedro Ferreira
+                    </p>
+                    <p class="company">
+                        Construtora Minari
+                    </p>
+                </div>
             </div>
             <div class="depoimento">
-                <p>
-                    Processos bem simples e criação de um site exatamente como a minha escola queria!
-                    Maria Rita
-                    Escola Criança Feliz
-                </p>
+                <div class="dep-texto">
+                    <span class="dot"></span>
+                    <p>
+                        Processos bem simples e criação de um site exatamente como a minha escola queria!
+                    </p>
+                </div>
+                <div class="author">
+                    <p>
+                        Maria Rita
+                    </p>
+                    <p class="company">
+                        Escola Criança Feliz
+                    </p>
+                </div>                
             </div>
         </div>
     </main>
 
     <footer>
-        Codar.
-        Criamos websites incríveis
+       <div class="logo-footer">
+        <a href="#" id="logo" class="white">Codar.</a>
+        <p>Criamos websites incríveis</p>
+       </div>
 
-        Sobre
-    Amamos criar soluções
-    e entregar sites incríveis
-    Contato
-    123 Av. Manjar - Nárnia
-    +55 96 2321-3131
-    contato@codar.com
-    Redes sociais
+        <div class="sobre">
+            <h3>Sobre</h3>
+            <p>Amamos criar soluções e entregar sites incríveis</p>
+        </div>
+        <div class="contato">
+            <h3>Contato</h3>
+            <p>123 Av. Manjar - Nárnia</p>
+            <p>+55 96 2321-3131</p>
+            <p>contato@codar.com</p>
+        </div>
+        <div class="socials">
+            <h3>Redes sociais</h3>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter-square"></i>
+        </div>
     </footer>
 </body>
 </html>
