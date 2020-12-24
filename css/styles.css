@@ -74,9 +74,9 @@ div.texto h1{
 
 a.btn-primary{
     background-color: var(--vermelho);
-    border-radius: 4%;
+    border-radius: 10px;
     color: white;
-    padding: 15px;
+    padding: 10px 30px;
     text-decoration: none;    
 }
 
@@ -147,8 +147,7 @@ a.btn-primary{
 
 .depoimento {
     background-color: var(--cinza);
-    border-radius: 5px;
-    /* display:flex; */
+    border-radius: 8px;
     flex-flow: column wrap;
     margin: 20px;
     padding: 20px;
@@ -216,6 +215,112 @@ footer {
 }
 
 footer p {
-    margin-top: 20px;
-    padding-bottom: 20px;
+    margin-top: 33px;
+}
+
+.logo-footer p{
+    margin-top: 0;
+}
+
+@media screen and (max-width: 425px){
+
+    .container {
+        width: 90%;
+    }
+
+    #logo{
+        display: block;
+        text-align: center;
+    }
+
+    nav {
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+        position: relative;
+    }
+    
+    nav ul li:nth-child(4){
+        display: none;
+    }
+
+    div.topo{
+        display: block;
+    }
+
+    img#video-call {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    #orcamento {
+        margin-top: 20px;
+    }
+
+    .services {
+        align-items: flex-start;
+        flex-flow: column-reverse wrap;
+    }
+
+    #coding {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .services ul {
+        width: 100%;
+    }
+
+    .call-to-action{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .call-to-action input {
+        align-self: center;
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .call-to-action a {
+        text-align: center;
+        width: 63%
+    }
+
+    .depoimentos {
+        flex-flow: column wrap;
+    }
+
+    .depoimento {
+        display: flex;
+        width: 85%;
+    }
+
+    .depoimento p {
+        text-align: right;
+    }
+
+    footer {
+        flex-flow: column wrap;
+    }
+
+    .sobre {
+        width: 50%;
+        text-align: left
+    }
+
+    .contato{
+        width: 50%;
+        text-align: left;
+    }
+
+    .socials {
+        width: 85%;
+        text-align: center;
+    }
 }
