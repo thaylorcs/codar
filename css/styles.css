@@ -148,6 +148,7 @@ a.btn-primary{
 .depoimento {
     background-color: var(--cinza);
     border-radius: 8px;
+    box-sizing: border-box;
     flex-flow: column wrap;
     margin: 20px;
     padding: 20px;
@@ -262,6 +263,10 @@ footer p {
         margin-top: 20px;
     }
 
+    #incrivel {
+        font-size: 2.0em;
+    }
+
     .services {
         align-items: flex-start;
         flex-flow: column-reverse wrap;
@@ -270,15 +275,24 @@ footer p {
     #coding {
         max-width: 100%;
         margin: 0;
+        padding: 0;
     }
 
     .services ul {
         width: 100%;
     }
 
+    .services ul li {
+        padding: 10px 0;
+    }
+
     .call-to-action{
         display: flex;
         flex-flow: column wrap;
+    }
+
+    .call-to-action h2 {
+        font-size: 22px;
     }
 
     .call-to-action input {
@@ -298,11 +312,17 @@ footer p {
 
     .depoimento {
         display: flex;
-        width: 85%;
+        width: 100%;
+        margin: 15px auto;
+        padding: 10px;
     }
 
     .depoimento p {
-        text-align: right;
+        text-align: left;
+    }
+
+    .depoimento p#depo-1{
+        text-align-last: center;
     }
 
     footer {
@@ -310,17 +330,17 @@ footer p {
     }
 
     .sobre {
-        width: 50%;
+        width: 80%;
         text-align: left
     }
 
     .contato{
-        width: 50%;
+        width: 80%;
         text-align: left;
     }
 
     .socials {
-        width: 85%;
-        text-align: center;
+        width: 80%;
+        text-align: left;
     }
 }
