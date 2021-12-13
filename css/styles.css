@@ -1,26 +1,26 @@
-:root{
+:root {
     --vermelho: #D6000D;
     --cinza: rgb(186, 186, 186);
 }
 
-*{
+* {
     font-family: 'Roboto', sans-serif;
     margin: 0 auto;
     padding: 0;
 }
 
-.container{
+.container {
     width: 90%;
 }
 
-#logo{
-    font-size: 50px;
+#logo {
+    font-size: 3.5rem;
     font-style: italic;
     font-weight: bold;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
-.red{
+.red {
     color: var(--vermelho);
 }
 
@@ -28,15 +28,19 @@
     color: black;
 }
 
+p {
+    font-size: 2rem;
+}
+
 nav ul {
     display: flex;
     justify-content: flex-end;
     position: absolute;
     top: 0;
-    right: 5px;    
+    right: 3%;
 }
 
-nav ul li{
+nav ul li {
     display: inline;
     list-style: none;
     padding: 10px 0;
@@ -45,16 +49,22 @@ nav ul li{
 
 nav ul li a {
     color: black;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 
-div.topo{
+#orcamento {
+    font-size: 2rem;
+    margin-top: 2%;
+}
+
+div.topo {
     align-items: flex-start;
     display: flex;
     margin-bottom: 60px;
 }
 
-div.texto{
+div.texto {
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
@@ -63,24 +73,24 @@ div.texto{
 
 div.texto p {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.7rem;
     padding: 20px;
 }
 
-div.texto h1{
+div.texto h1 {
     color: var(--vermelho);
     font-size: 2.7em;
 }
 
-a.btn-primary{
+a.btn-primary {
     background-color: var(--vermelho);
     border-radius: 10px;
     color: white;
-    padding: 10px 30px;
-    text-decoration: none;    
+    padding: 1rem;
+    text-decoration: none;
 }
 
-#video-call{
+#video-call {
     max-width: 50%;
     margin: 0;
     display: inline;
@@ -88,58 +98,55 @@ a.btn-primary{
 
 .services {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: space-between;
 }
 
-.services ul{
-    margin: 0;
-    width: 30%;
-}
-
-.services i{
+.services i {
     color: var(--vermelho);
 }
 
-.services li{ 
-    font-size: 24px;
+.services-list li {
+    font-size: 2rem;
     list-style: none;
     padding: 10px 10px 10px;
 }
 
-.services-img{
-    width: 70%;
-    align-self: flex-end;
+.services-img {
+    align-items: center;
+    justify-content: center;
 }
 
-.services-img img{
-    align-self: flex-end;
-    max-width: 70%;
-    padding: 20px;
-    margin-left: 100px
+#coding {
+    max-width: 50%;
+    width: 50%;
 }
 
-.call-to-action{
+.call-to-action {
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     margin-top: 40px;
 }
 
-.call-to-action h2{
+.call-to-action h2 {
     padding: 20px 0;
 }
 
-.call-to-action input{
+.call-to-action input {
+    font-size: 1.7rem;
     background-color: var(--cinza);
     border: none;
-    border-radius: 4%;
-    padding: 15px;
-    margin: 0;
+    border-radius: 10px;
+    padding: 1.1rem;
+    margin-bottom: 7%;
 }
 
 .call-to-action a {
     text-decoration: none;
 }
 
-.depoimentos{
+.depoimentos {
     display: flex;
     flex-flow: row nowrap;
     margin-top: 40px;
@@ -164,18 +171,18 @@ a.btn-primary{
     width: 55px;
 }
 
-.author{
+.author {
     margin-left: 70px;
-    margin-top: 35px;
+    margin-top: 6%;
 }
 
 .author p {
-    font-size: 22px;
+    font-size: 1.7rem;
     font-weight: bold;
 }
 
 p.company {
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 footer {
@@ -187,7 +194,6 @@ footer {
 
 .logo-footer {
     padding: 20px;
-    /* width: 25%; */
 }
 
 .white {
@@ -201,35 +207,46 @@ footer {
 
 .contato {
     margin-top: 25px;
-    width: 25%;
 }
 
-.socials{
+.socials {
+    display: flex;
+    flex-direction: column;
     margin-top: 25px;
-    width: 25%;
 }
 
 .socials i {
     color: var(--vermelho);
-    font-size: 40px;
+    font-size: 2.5rem;
     margin: 10px 15px;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer h3 {
+    font-size: 3rem;
 }
 
 footer p {
     margin-top: 33px;
+    font-size: 2rem;
 }
 
-.logo-footer p{
+.logo-footer p {
     margin-top: 0;
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 425px) {
 
     .container {
         width: 90%;
     }
 
-    #logo{
+    #logo {
         display: block;
         text-align: center;
     }
@@ -245,12 +262,16 @@ footer p {
         text-align: center;
         position: relative;
     }
-    
-    nav ul li:nth-child(4){
+
+    nav ul li:nth-child(4) {
         display: none;
     }
 
-    div.topo{
+    #alavanque {
+        text-align: center;
+    }
+
+    div.topo {
         display: block;
     }
 
@@ -261,6 +282,7 @@ footer p {
 
     #orcamento {
         margin-top: 20px;
+        text-align: center;
     }
 
     #incrivel {
@@ -273,37 +295,22 @@ footer p {
     }
 
     #coding {
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
+        width: 100%;
     }
 
     .services ul {
         width: 100%;
     }
 
-    .services ul li {
+    .services-list li {
+        font-size: 2.5rem;
+        margin-top: 5%;
         padding: 10px 0;
     }
 
-    .call-to-action{
+    .phone-register {
         display: flex;
-        flex-flow: column wrap;
-    }
-
-    .call-to-action h2 {
-        font-size: 22px;
-    }
-
-    .call-to-action input {
-        align-self: center;
-        width: 70%;
-        margin-bottom: 20px;
-    }
-
-    .call-to-action a {
-        text-align: center;
-        width: 63%
+        flex-direction: column;
     }
 
     .depoimentos {
@@ -313,34 +320,35 @@ footer p {
     .depoimento {
         display: flex;
         width: 100%;
-        margin: 15px auto;
+        margin: 3% auto;
         padding: 10px;
     }
 
-    .depoimento p {
-        text-align: left;
-    }
+   .dep-texto p {
+       font-size: 2rem;
+   }
 
-    .depoimento p#depo-1{
+    .depoimento p#depo-1 {
         text-align-last: center;
     }
 
     footer {
         flex-flow: column wrap;
+        align-items: center;
     }
 
     .sobre {
         width: 80%;
-        text-align: left
+        text-align: center;
     }
 
-    .contato{
+    .contato {
         width: 80%;
-        text-align: left;
+        text-align: center;
     }
 
     .socials {
         width: 80%;
-        text-align: left;
+        text-align: center;
     }
 }
