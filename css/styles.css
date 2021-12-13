@@ -6,7 +6,8 @@
 
 * {
     font-family: 'Roboto', sans-serif;
-    margin: 0 auto;
+    box-sizing: border-box;
+    margin: 0;
     padding: 0;
 }
 
@@ -17,9 +18,11 @@
 }
 
 #logo {
+    display: inline-block;
     font-size: 3.5rem;
     font-style: italic;
     font-weight: bold;
+    margin-left: 3%;
     text-decoration: none;
 }
 
@@ -31,26 +34,38 @@
     color: black;
 }
 
-
-nav ul {
+#menu {
     display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    top: 0;
-    right: 3%;
+    font-size: 2rem;
+    justify-content: space-between;
 }
 
-nav ul li {
+.main-menu ul {
+    display: flex;
+    justify-content: center;
+}
+
+.main-menu ul li {
     display: inline;
     list-style: none;
     padding: 10px 0;
     margin: 10px 15px;
 }
 
-nav ul li a {
-    color: black;
+.main-menu ul li a {
     font-size: 1.5rem;
     text-decoration: none;
+    color: black;
+}
+
+.btn-primary {
+    background-color: var(--vermelho);
+    border-radius: 10px;
+    text-align: center;
+    color: white !important;
+    padding: 1rem;
+    text-decoration: none;
+    margin: 0;
 }
 
 #orcamento {
@@ -59,16 +74,22 @@ nav ul li a {
 }
 
 .topo {
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 78px);
+}
+
+#video-call {
+    display: inline;
+    max-width: 50%;
+    margin-right: 5%;
 }
 
 .texto {
+    align-items: center;
     display: flex;
-    flex-flow: column nowrap;
-    align-items: stretch;
-    align-self: center;
+    flex-flow: column;
 }
 
 .texto p {
@@ -80,22 +101,6 @@ nav ul li a {
 .texto h1 {
     color: var(--vermelho);
     font-size: 2.7em;
-}
-
-a.btn-primary {
-    background-color: var(--vermelho);
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    padding: 1rem;
-    text-decoration: none;
-    margin: 0;
-}
-
-#video-call {
-    max-width: 50%;
-    margin: 0;
-    display: inline;
 }
 
 .services {
@@ -137,21 +142,26 @@ a.btn-primary {
 }
 
 .phone-register {
+    align-items: center;
     display: flex;
+    justify-content: center;
 }
 
-.call-to-action input {
+.phone-register input {
     font-size: 1.7rem;
     background-color: var(--cinza);
     border: none;
-    border-radius: 10px;
-    margin: 7%;
-    max-width: 80%;
-    padding: 1.1rem;
+    border-radius: 10px 0 0 10px;
+    max-width: 70%;
+    padding: 1rem;
 }
 
 .call-to-action a {
     text-decoration: none;
+}
+
+.btn-action {
+    border-radius: 0 5px 5px 0;
 }
 
 .depoimentos {
@@ -197,18 +207,34 @@ footer {
     background-color: black;
     color: white;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
+    font-size: 1.2rem;
+    padding: 2%;
 }
-
 
 .white {
     color: white;
 }
 
-.sobre {
+.logo-footer {
+    align-items: center;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    flex: 2;
+}
+
+.sobre {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
     margin-top: 25px;
+    text-align: center;
+}
+
+.sobre p {
+    text-align: center;
+    max-width: 80%;
 }
 
 .contato {
@@ -235,47 +261,25 @@ footer {
     justify-content: space-around;
 }
 
-footer {
-    display: flex;
-    font-size: 1.5rem;
-}
-
-footer h3 {
-    font-size: 3rem;
-}
-
-footer p {
-    margin-top: 33px;
-    font-size: 2rem;
-}
-
-.logo-footer {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
 @media screen and (max-width: 425px) {
 
     .container {
         width: 95%;
     }
 
+    #menu {
+        flex-direction: column;
+    }
+
     #logo {
         display: inline-block;
         text-align: center;
+        margin-left: 0;
     }
 
-    nav {
-        display: block;
-        position: relative;
-        text-align: center;
-    }
-
-    nav ul {
-        display: block;
-        text-align: center;
-        position: relative;
+    .main-menu {
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul li:nth-child(4) {
@@ -286,13 +290,14 @@ footer p {
         text-align: center;
     }
 
-    div.topo {
+    .topo {
         display: block;
+        margin: 0 auto;
     }
 
-    img#video-call {
-        margin-top: 20px;
-        max-width: 100%;
+    #video-call {
+        margin-right: 0;
+        max-width: 95%;
     }
 
     #orcamento {
@@ -305,12 +310,8 @@ footer p {
     }
 
     .services {
-        align-items: flex-start;
-        flex-flow: column-reverse wrap;
-    }
-
-    #coding {
-        width: 100%;
+        flex-flow: column-reverse;
+        margin-top: 20%;
     }
 
     .services ul {
@@ -323,10 +324,17 @@ footer p {
         padding: 10px 0;
     }
 
+    #coding {
+        max-width: 100%;
+        margin-top: 10%;
+        width: 100%;
+    }
+
     .call-to-action {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        margin: 0;
     }
 
     .phone-register {
@@ -337,12 +345,18 @@ footer p {
     }
 
     .phone-register input {
-        max-width: 65%;
+        border-radius: 10px;
+        max-width: 77%;
         margin: 1%;
+    }
+
+    .btn-action {
+        border-radius: 10px;
     }
 
     .depoimentos {
         flex-flow: column wrap;
+        margin: 0 auto;
     }
 
     .depoimento {
@@ -361,24 +375,22 @@ footer p {
     }
 
     footer {
-        flex-flow: column wrap;
         align-items: center;
-    }
-
-    .sobre {
-        width: 80%;
-        text-align: center;
+        flex-flow: column wrap;
+        margin: 0 auto;
     }
 
     .contato {
         align-items: center;
-
         text-align: center;
-        width: 80%;
     }
 
     .socials {
-        width: 80%;
         text-align: center;
+    }
+
+    .sobre p {
+        text-align: center;
+        max-width: 100%;
     }
 }
