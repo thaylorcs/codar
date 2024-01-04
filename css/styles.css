@@ -11,6 +11,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     display: flex;
     margin: 0 auto;
@@ -18,11 +22,11 @@
 }
 
 #logo {
-    display: inline-block;
-    font-size: 3.5rem;
+    display: block;
+    font-size: 20px;
     font-style: italic;
     font-weight: bold;
-    margin-left: 3%;
+    text-align: center;
     text-decoration: none;
 }
 
@@ -36,8 +40,9 @@
 
 #menu {
     display: flex;
-    font-size: 2rem;
+    flex-direction: column;
     justify-content: space-between;
+    font-size: 14px;
 }
 
 .main-menu ul {
@@ -45,15 +50,16 @@
     justify-content: center;
 }
 
-.main-menu ul li {
-    display: inline;
+.menu-item {
+    display: flex;
     list-style: none;
     padding: 10px 0;
-    margin: 10px 15px;
+    margin: 0 5px;
+    justify-content: center;
 }
 
-.main-menu ul li a {
-    font-size: 1.5rem;
+.menu-item-link {
+    font-size: 20px;
     text-decoration: none;
     color: black;
 }
@@ -61,99 +67,105 @@
 .btn-primary {
     background-color: var(--vermelho);
     border-radius: 10px;
-    text-align: center;
-    color: white !important;
-    padding: 1rem;
-    text-decoration: none;
+    color: white;
     margin: 0;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
 }
 
 #orcamento {
-    font-size: 2rem;
+    font-size: 24px;
     margin-top: 2%;
+}
+
+#orcamento:hover {
+    background-color: black;
 }
 
 .topo {
     align-items: center;
-    justify-content: space-between;
     display: flex;
-    height: calc(100vh - 78px);
+    flex-direction: column;
+    margin-bottom: 40px;
 }
 
 #video-call {
     display: inline;
     max-width: 50%;
-    margin-right: 5%;
 }
 
 .texto {
     align-items: center;
+    justify-content: center;
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
 }
 
 .texto p {
+    text-align: center;
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 17px;
     padding: 20px;
 }
 
 .texto h1 {
     color: var(--vermelho);
-    font-size: 2.7em;
+    text-align: center;
+    width: 100%;
 }
 
 .services {
-    display: flex;
-    justify-content: space-between;
-}
-
-.services i {
-    color: var(--vermelho);
-}
-
-.services-list li {
-    font-size: 2rem;
-    list-style: none;
-    padding: 10px 10px 10px;
-}
-
-.services-img {
     align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    /* flex-direction: column; */
     justify-content: center;
 }
 
 #coding {
-    max-width: 50%;
-    width: 50%;
+    width: 260px;
+}
+
+.services i {
+    color: var(--vermelho);
+
+}
+
+.services-list li {
+    font-size: 24px;
+    list-style: none;
+    padding: 10px 10px 10px;
 }
 
 .call-to-action {
-    font-size: 1.7rem;
-    display: flex;
     align-items: center;
+    display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .call-to-action h2 {
-    padding: 20px 0;
-    text-align: center
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+    width: 100%;
 }
 
 .phone-register {
     align-items: center;
     display: flex;
     justify-content: center;
+    max-width: 90%;
 }
 
 .phone-register input {
-    font-size: 1.7rem;
+    font-size: 20px;
     background-color: var(--cinza);
     border: none;
     border-radius: 10px 0 0 10px;
     max-width: 70%;
-    padding: 1rem;
+    padding: 10px;
 }
 
 .call-to-action a {
@@ -161,12 +173,19 @@
 }
 
 .btn-action {
-    border-radius: 0 5px 5px 0;
+    align-items: center;
+    border-radius: 0 10px 10px 0;
+    font-size: 15px;
+    justify-content: center;
+    padding: 5px 5px 0;
+    height: 44px;
+    width: 100%;
+    text-align: center;
 }
 
 .depoimentos {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     margin-top: 40px;
 }
 
@@ -175,9 +194,9 @@
     border-radius: 8px;
     box-sizing: border-box;
     flex-flow: column wrap;
-    margin: 20px;
+    flex-grow: 1;
+    margin: 15px 0;
     padding: 20px;
-    width: 50%;
 }
 
 .dot {
@@ -195,22 +214,22 @@
 }
 
 .author p {
-    font-size: 1.7rem;
+    font-size: 20px;
     font-weight: bold;
 }
 
 p.company {
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 
 footer {
-    align-items: flex-start;
+    align-items: center;
     background-color: black;
-    justify-content: space-around;
+    justify-content: space-evenly;
     color: white;
     display: flex;
-    flex-flow: row wrap;
-    font-size: 1.2rem;
+    flex-direction: column;
+    font-size: 20px;
     padding: 2%;
 }
 
@@ -218,36 +237,23 @@ footer {
     color: white;
 }
 
-.logo-footer {
+.logo-footer, .sobre, .contato, .socials {
     align-items: center;
     text-align: center;
     display: flex;
     flex-direction: column;
-}
-
-.sobre {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 0 10px;
-}
-
-.contato {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.socials {
-    display: flex;
-    flex-direction: column;
+    margin: 20px 10px;
 }
 
 .socials i {
     color: var(--vermelho);
-    font-size: 2.5rem;
+    font-size: 20px;
     margin: 10px 15px;
     text-align: center;
+}
+
+.socials i:hover {
+    color: white;
 }
 
 .social-icons {
@@ -255,139 +261,40 @@ footer {
     justify-content: space-around;
 }
 
-@media screen and (max-width: 425px) {
-
-    .container {
-        width: 95%;
-    }
-
-    #menu {
-        flex-direction: column;
-    }
-
-    #logo {
-        display: inline-block;
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .main-menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li:nth-child(4) {
-        display: none;
-    }
-
-    #alavanque {
-        text-align: center;
-    }
+@media screen and (min-width: 768px) {
 
     .topo {
-        display: block;
-        margin: 0 auto;
-    }
-
-    #video-call {
-        margin-right: 0;
-        max-width: 95%;
-    }
-
-    #orcamento {
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    #incrivel {
-        font-size: 2.0rem;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 40px;
     }
 
     .services {
-        flex-flow: column-reverse;
-        margin-top: 20%;
-    }
-
-    .services ul {
-        width: 100%;
-    }
-
-    .services-list li {
-        font-size: 1.5rem;
-        margin-top: 5%;
-        padding: 10px 0;
-    }
-
-    #coding {
-        max-width: 100%;
-        margin-top: 10%;
-        width: 100%;
-    }
-
-    .call-to-action {
         align-items: center;
         display: flex;
-        flex-direction: column;
-        margin: 0 auto;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 80%;
     }
 
-    .phone-register {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .phone-register input {
-        border-radius: 10px;
-        max-width: 77%;
-        margin: 1%;
-    }
-
-    .btn-action {
-        border-radius: 10px;
-    }
-
-    .depoimentos {
-        flex-flow: column wrap;
-        margin: 0 auto;
-    }
-
-    .depoimento {
-        display: flex;
-        width: 100%;
-        margin: 3% auto;
-        padding: 10px;
-    }
-
-    .dep-texto p {
-        font-size: 1.5rem;
-    }
-
-    .depoimento p#depo-1 {
-        text-align-last: center;
+    .logo-footer, .sobre, .contato, .socials {
+        width: 50%;
     }
 
     footer {
-        align-items: center;
-        flex-flow: column wrap;
-        margin: 0 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-width: 1024px) {
+
+    .logo-footer, .sobre, .contato, .socials {
+        width: auto;
     }
 
-    .contato {
-        align-items: center;
-        text-align: center;
-        margin-top: 5%;
-    }
-
-    .socials {
-        text-align: center;
-        margin-top: 5%;
-    }
-
-    .sobre {
-        text-align: center;
-        max-width: 100%;
-        margin-top: 5%;
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
